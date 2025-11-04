@@ -16,7 +16,7 @@ Infraestructura creada con Terraform para un clúster EKS:
 Configurados los valores en terraform.tfvars. 
 Las descripciones están en variables.tf
 
-# PREX Challenge – Aplicación en Kubernetes
+# Challenge – Aplicación en Kubernetes
 
 ## Descripción
 Aplicación realizada FastApi para probar comunicación interna entre servicios en Kubernetes
