@@ -1,4 +1,4 @@
-# PREX Challenge – Infraestructura AWS EKS
+# Challenge – Infraestructura AWS EKS
 
 ## Descripción
 Infraestructura creada con Terraform para un clúster EKS:
