@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>STATUS PAGE</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh; 
+                margin: 0;
+            }
+            pre {
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>STATUS PAGE</h1>
+        <button onclick="check_status()">ver Status</button>
+        <pre id="output"></pre>
+        <script>
+            async function check_status() {
+                document.getElementById("output").innerText= "Verifying...";
+                try {
+                    const response = await fetch("/api/status");
+                    const data = await response.json();
+                    document.getElementById("output").innerText = JSON.stringify(data, null, 2); 
+                } catch (error) {
+                    document.getElementById("output").innerText = "[ERROR]";
+                }
+                
+            }
+        </script>
+
+    </body>
+</html>

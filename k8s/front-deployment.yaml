@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge2-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: challenge2-frontend
+  template:
+    metadata:
+      labels:
+        app: challenge2-frontend
+    spec:
+      containers:
+        - name: challenge2-frontend
+          image: challenge2-frontend:local
+          ports:
+            - containerPort: 80
